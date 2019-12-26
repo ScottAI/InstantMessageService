@@ -1,0 +1,3 @@
+/Users/liujinliang/CLionProjects/InstantMessageService/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/liujinliang/CLionProjects/InstantMessageService/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/liujinliang/CLionProjects/InstantMessageService/cmake-build-debug/CMakeFiles/InstantMessageService.dir
