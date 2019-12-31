@@ -9,7 +9,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef0f3cf-492f-431f-bd45-5ab77989b5d9" name="Default Changelist" comment="" />
+    <list default="true" id="8ef0f3cf-492f-431f-bd45-5ab77989b5d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577337541709</updated>
-      <workItem from="1577337543427" duration="30668000" />
+      <workItem from="1577337543427" duration="30910000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1577763100574</created>
