@@ -9,65 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ef0f3cf-492f-431f-bd45-5ab77989b5d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/InstantMessageService.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/InstantMessageService.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/InstantMessageService.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/InstantMessageService.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/InstantMessageService.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/InstantMessageService.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/InstantMessageService.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/InstantMessageService.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/sql/bd-test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/script/sql/bd-test.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/sql/db-psd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/script/sql/db-ims.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/client.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/client.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/client_graphic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/client_graphic.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/client_graphic.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/client_graphic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/client_graphic_v2.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/client_graphic_v2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/client_graphic_v2.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/client_graphic_v2.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ims_client.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ims_client.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/network.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/network.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/list.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/list.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpc/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpc/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rpc/ims.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpc/ims.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ims_server.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ims_server.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/server.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_client_api.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_client_api.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_client_graphic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_client_graphic.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_client_network.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_client_network.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_server.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_server.c" afterDir="false" />
-    </list>
+    <list default="true" id="8ef0f3cf-492f-431f-bd45-5ab77989b5d9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,8 +51,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577337541709</updated>
-      <workItem from="1577337543427" duration="30480000" />
+      <workItem from="1577337543427" duration="30668000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1577763100574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577763100574</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,5 +76,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
