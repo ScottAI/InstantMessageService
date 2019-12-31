@@ -1,11 +1,11 @@
 MAIN_SRC=client.c
-SOURCES=chats.c friends.c messages.c chat_members.c friend_requests.c persistence.c psd_ims_client.c network.c client_graphic_v2.c
-HEADERS=chats.h friends.h messages.h chat_members.h friend_requests.h persistence.h psd_ims_client.h network.h client_graphic_v2.h
+SOURCES=chats.c friends.c messages.c chat_members.c friend_requests.c persistence.c ims_client.c network.c client_graphic_v2.c
+HEADERS=chats.h friends.h messages.h chat_members.h friend_requests.h persistence.h ims_client.h network.h client_graphic_v2.h
 
 COMMON_LIBS=list leak_detector_c
 RPC_LIBS=soapC soapClient
 
-TARGET=$(MAIN_SRC:%.c=$(BIN_DIR)/%)
+TARGET=$(MAIN_SRC:%.c=$(CLIENT_BIN_DIR)/%)
 TEST_LIB=$(MAIN_SRC:%.c=$(OBJ_DIR)/lib%.a)
 MAIN_OBJ=$(MAIN_SRC:%.c=$(MAIN_OBJ_DIR)/%.o)
 COBJS=$(SOURCES:%.c=$(OBJ_DIR)/%.o)
@@ -20,14 +20,18 @@ ECHO_FLAGS=
 #-------------------------------------------------------------
 PROJECT_DIR=../..
 SUBPROJECT=client
+GSOAP_INCLUDE="".
 SRC_DIR=$(PROJECT_DIR)/src/$(SUBPROJECT)
+INCLUDE_DIR="/home/vagrant/gsoap-2.8/gsoap/import"
 SRC_COMMON_DIR=$(PROJECT_DIR)/src/common
 SRC_RPC_DIR=$(PROJECT_DIR)/src/rpc
 OBJ_DIR=$(PROJECT_DIR)/build/$(SUBPROJECT)
 MAIN_OBJ_DIR=$(PROJECT_DIR)/build/$(SUBPROJECT)/$(SUBPROJECT)
 OBJ_COMMON_DIR=$(PROJECT_DIR)/build/common
 OBJ_RPC_DIR=$(PROJECT_DIR)/build/rpc
+
 BIN_DIR=$(PROJECT_DIR)/bin
+CLIENT_BIN_DIR=$(PROJECT_DIR)/bin/client
 
 
 
@@ -38,6 +42,8 @@ CFLAGS=-I$(SRC_COMMON_DIR) -I$(SRC_RPC_DIR) -I$(GSOAP_INCLUDE)
 LDFLAGS=-L$(GSOAP_LIB)
 LDLIBS=-lgsoap $(SSL_LIBS) -pthread
 
+INCLUDE=-I$(INCLUDE_DIR)
+
 SSL_LIBS=-lssl -lcrypto
 SSL_FLAGS=-DWITH_OPENSSL
 
@@ -47,7 +53,8 @@ all: $(TARGET)
 
 $(TARGET): $(BIN_DIR) $(OBJ_DIR) $(MAIN_OBJ_DIR) $(COMMON_OBJS) $(COBJS) $(MAIN_OBJ)
 	@echo $(ECHO_FLAGS) "\tLD " $(TARGET)
-	@gcc -o $@ $(MAIN_OBJ) $(COBJS) $(COMMON_OBJS) $(RPC_OBJS) $(LDFLAGS) $(SSL_FLAGS) $(LDLIBS)
+	@echo "test here test here"
+	@gcc -o  $@ $(MAIN_OBJ) $(COBJS) $(COMMON_OBJS) $(RPC_OBJS) $(LDFLAGS) $(SSL_FLAGS) $(LDLIBS)
 
 
 $(MAIN_OBJ_DIR)/%.o : %.c
@@ -83,3 +90,4 @@ $(MAIN_OBJ_DIR):
 $(BIN_DIR):
 	@echo $(ECHO_FLAGS) "\tCreating dir $(BIN_DIR)"
 	@mkdir -p $(BIN_DIR)
+	@mkdir -p $(CLIENT_BIN_DIR)

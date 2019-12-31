@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "psd_ims_client.h"
+#include "ims_client.h"
 #include "leak_detector_c.h"
 
 

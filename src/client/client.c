@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "psd_ims_client.h"
+#include "ims_client.h"
 #include "client_graphic_v2.h"
 #include "bool.h"
 

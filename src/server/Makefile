@@ -1,11 +1,11 @@
 MAIN_SRC=server.c
-SOURCES=persistence.c psd_ims_server.c
-HEADERS=persistence.h psd_ims_server.h
+SOURCES=persistence.c ims_server.c
+HEADERS=persistence.h ims_server.h
 
 COMMON_LIBS=*
 RPC_LIBS=soapC soapServer
 
-TARGET=$(MAIN_SRC:%.c=$(BIN_DIR)/%)
+TARGET=$(MAIN_SRC:%.c=$(SERVER_BIN_DIR)/%)
 TEST_LIB=$(MAIN_SRC:%.c=$(OBJ_DIR)/lib%.a)
 MAIN_OBJ=$(MAIN_SRC:%.c=$(MAIN_OBJ_DIR)/%.o)
 COBJS=$(SOURCES:%.c=$(OBJ_DIR)/%.o)
@@ -29,6 +29,9 @@ OBJ_COMMON_DIR=$(PROJECT_DIR)/build/common
 OBJ_RPC_DIR=$(PROJECT_DIR)/build/rpc
 BIN_DIR=$(PROJECT_DIR)/bin
 
+SERVER_BIN_DIR=$(PROJECT_DIR)/bin/$(SUBPROJECT)
+GSOAP_INCLUDE="".
+
 
 
 #-------------------------------------------------------------
@@ -40,6 +43,8 @@ MYSQL_LDFLAGS := $(shell mysql_config --libs)
 LDFLAGS=-L$(GSOAP_LIB) $(MYSQL_LDFLAGS)
 LDLIBS=-lgsoap $(SSL_LIBS) -pthread
 
+INCLUDE=-I$(SRC_DIR)
+
 SSL_LIBS=-lssl -lcrypto
 SSL_FLAGS=-DWITH_OPENSSL
 
@@ -47,9 +52,10 @@ SSL_FLAGS=-DWITH_OPENSSL
 
 all: $(TARGET)
 
-$(TARGET): $(BIN_DIR) $(OBJ_DIR) $(MAIN_OBJ_DIR) $(COMMON_OBJS) $(COBJS) $(MAIN_OBJ)
+$(TARGET): $(BIN_DIR) $(OBJ_DIR) $(MAIN_OBJ_DIR) $(COMMON_OBJS) $(COBJS) $(MAIN_OBJ) $(SERVER_BIN_DIR)
 	@echo $(ECHO_FLAGS) "\tLD " $(TARGET)
-	@gcc -o $@ $(MAIN_OBJ) $(COBJS) $(COMMON_OBJS) $(RPC_OBJS) $(LDFLAGS) $(SSL_FLAGS) $(LDLIBS)
+	@echo "server test server test"
+	@gcc -o  $@ $(MAIN_OBJ) $(COBJS) $(COMMON_OBJS) $(RPC_OBJS) $(LDFLAGS) $(SSL_FLAGS) $(LDLIBS)
 
 
 $(MAIN_OBJ_DIR)/%.o : %.c
@@ -64,7 +70,7 @@ $(OBJ_DIR)/%.o : %.c
 
 $(COBJS): | $(OBJ_DIR) $(MAIN_OBJ_DIR)
 
-$(TARGET): | $(BIN_DIR)
+$(TARGET): | $(BIN_DIR) $(SERVER_BIN_DIR)
 
 clean:
 	@rm -rf *.xml *.nsmap *.wsdl *.xsd
@@ -85,3 +91,7 @@ $(MAIN_OBJ_DIR):
 $(BIN_DIR):
 	@echo $(ECHO_FLAGS) "\tCreating dir $(BIN_DIR)"
 	@mkdir -p $(BIN_DIR)
+
+$(SERVER_BIN_DIR):
+	@echo $(ECHO_FLAGS) "\tCreating dir $(SERVER_BIN_DIR)"
+	@mkdir -p $(SERVER_BIN_DIR)

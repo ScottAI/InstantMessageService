@@ -7,7 +7,7 @@
 #include <signal.h>
 #include <unistd.h>
 
-#include "psd_ims_server.h"
+#include "ims_server.h"
 
 #include "debug_def.h"
 

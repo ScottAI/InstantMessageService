@@ -2,7 +2,7 @@
 // Created by 刘金亮 on 2019-12-26.
 //
 #include "soapH.h"
-#include "psd_ims_client.h"
+#include "ims_client.h"
 #include "friends.h"
 #include "chats.h"
 #include "network.h"

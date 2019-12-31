@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <pthread.h>
-#include "psd_ims_client.h"
+#include "ims_client.h"
 #include "bool.h"
 
 #include "debug_def.h"

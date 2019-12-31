@@ -86,7 +86,7 @@ void list_free(list *list) {
     DEBUG_TRACE_PRINT();
     list_node *node;
 
-    if ((list->item_free == NULL) || (list->info_free == NULL) ) {
+    if ((list->item_free == NULL) || (list->info_free == NULL)) {
         DEBUG_FAILURE_PRINTF("Could not free the list, free functions not defined");
         return;
     }
@@ -121,7 +121,7 @@ void *list_find_item(list *list, const void *comp_val) {
     }
     node = _find_node(list, comp_val, list->item_value_comp);
 
-    return (node != NULL)? node->item : NULL;
+    return (node != NULL) ? node->item : NULL;
 }
 
 
@@ -171,9 +171,9 @@ void list_delete_node(list *list, list_node *node) {
 
 void list_delete_first(list *list, int num_elems) {
     DEBUG_TRACE_PRINT();
-    for( num_elems ; num_elems > 0 ; num_elems-- ) {
-        if(list->ghost_item->next == list->ghost_item) {
-            return;	// if the list is empty
+    for (num_elems; num_elems > 0; num_elems--) {
+        if (list->ghost_item->next == list->ghost_item) {
+            return;    // if the list is empty
         }
         _node_delete(list->ghost_item->next, list->item_free);
         list->n_elems--;
@@ -183,9 +183,9 @@ void list_delete_first(list *list, int num_elems) {
 
 void list_delete_last(list *list, int num_elems) {
     DEBUG_TRACE_PRINT();
-    for( num_elems ; num_elems > 0 ; num_elems-- ) {
-        if(list->ghost_item->prev == list->ghost_item) {
-            return;	// if the list is empty
+    for (num_elems; num_elems > 0; num_elems--) {
+        if (list->ghost_item->prev == list->ghost_item) {
+            return;    // if the list is empty
         }
         _node_delete(list->ghost_item->prev, list->item_free);
         list->n_elems--;

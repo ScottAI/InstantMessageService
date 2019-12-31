@@ -2,200 +2,207 @@
 // Created by 刘金亮 on 2019-12-26.
 //
 
-#ifndef INSTANTMESSAGESERVICE_IMS_H
-#define INSTANTMESSAGESERVICE_IMS_H
+
 #import "soap12.h"
 #import "xop.h"
 #import "xmime5.h"
-typedef struct ims__file{
-    unsigned char* __ptr;
+//gsoap ims service name: psdims
+//gsoap ims service style: rpc
+//gsoap ims service location: http://localhost:10000
+//gsoap ims service encoding: literal
+//gsoap ims service namespace: urn:psdims
+
+
+typedef struct psdims__file {
+    unsigned char *__ptr;
     int __size;
-}ims__file;
+} psdims__file;
 
-typedef struct ims__string{
-    char* string;
-}ims__string;
+typedef struct psdims__string {
+    char *string;
+} psdims__string;
 
-typedef struct ims__notif_friend_info{
-    ims__string name;
+typedef struct psdims__notif_friend_info {
+    psdims__string name;
     int send_date;
-}ims__notif_friend_info;
+} psdims__notif_friend_info;
 
-typedef struct ims__notif_friend_list{
+typedef struct psdims__notif_friend_list {
     int __sizenelems;
-    ims__notif_friend_info* user;
-}ims_notif_friend_list;
+    psdims__notif_friend_info *user;
+} psdims__notif_friend_list;
 
-typedef struct ims__notif_chat_info{
+typedef struct psdims__notif_chat_info {
     int chat_id;
     int timestamp;
-}ims_notif_chat_info;
+} psdims__notif_chat_info;
 
-typedef struct ims__notif_chat_list{
+typedef struct psdims__notif_chat_list {
     int __sizenelems;
-    ims__notif_chat_info* chat;
-}ims__notif_chat_list;
+    psdims__notif_chat_info *chat;
+} psdims__notif_chat_list;
 
-typedef struct ims__notif_member_info{
-    ims__string name;
+typedef struct psdims__notif_member_info {
+    psdims__string name;
     int chat_id;
     int timestamp;
-}ims__notif_member_info;
+} psdims__notif_member_info;
 
-typedef struct ims__notif_chat_member_list{
+typedef struct psdims__notif_chat_member_list {
     int __sizenelems;
-    ims__notif_member_info* member;
-}ims__notif_chat_member_list;
+    psdims__notif_member_info *member;
+} psdims__notif_chat_member_list;
 
-typedef struct ims__sync{
-    ims__notif_chat_list chat_read_timestamp;
-}ims__sync;
+typedef struct psdims__sync {
+    psdims__notif_chat_list chat_read_timestamps;
+} psdims__sync;
 
-typedef struct ims__new_chat{
-    char* description;
-    char* member;
-}ims__new_chat;
+typedef struct psdims__new_chat {
+    char *description;
+    char *member;
+} psdims__new_chat;
 
-typedef struct ims__login_info{
-    char* name;
-    char* password;
-}ims__login_info;
+typedef struct psdims__login_info {
+    char *name;
+    char *password;
+} psdims__login_info;
 
-typedef struct ims__register_info{
-    char* name;
-    char* password;
-    char* information;
-}ims__register_info;
+typedef struct psdims__register_info {
+    char *name;
+    char *password;
+    char *information;
+} psdims__register_info;
 
-//Users
-typedef struct ims__user_info{
-    char* name;
-    char* information;
-}ims__user_info;
+// Users
+typedef struct psdims__user_info {
+    char *name;
+    char *information;
+} psdims__user_info;
 
-typedef struct ims__user_list{
+typedef struct psdims__user_list {
     int __sizenelems;
-    ims__user_info* user;
+    psdims__user_info *user;
     int last_timestamp;
-}ims__user_list;
+} psdims__user_list;
 
-//Messages
-typedef struct ims__message_info{
-    char* user;
-    char* text;
-    char* file_name;
+
+// Messages
+typedef struct psdims__message_info {
+    char *user;
+    char *text;
+    char *file_name;
     int send_date;
-}ims__message_info;
+} psdims__message_info;
 
-typedef struct ims__message_list{
+typedef struct psdims__message_list {
     int __sizenelems;
-    ims__message_info* messages;
+    psdims__message_info *messages;
     int read_timestamp;
     int last_timestamp;
-}ims__message_list;
+} psdims__message_list;
 
-//chats and chats members
-typedef struct ims__member_list{
+// Chats and chat members
+typedef struct psdims__member_list {
     int __sizenelems;
-    ims__string* name;
+    psdims__string *name;
     int last_timestamp;
-}ims__member_list;
+} psdims__member_list;
 
-typedef struct ims__chat_info{
+typedef struct psdims__chat_info {
     int chat_id;
-    char* description;
-    char* admin;
+    char *description;
+    char *admin;
     int read_timestamp;
     int all_read_timestamp;
-    ims__member_list members;
-}ims__chat_info;
+    //psdims__message_list messages;
+    psdims__member_list members;
+} psdims__chat_info;
 
-typedef struct ims__chat_list{
+typedef struct psdims__chat_list {
     int __sizenelems;
-    ims__chat_info* chat_info;
+    psdims__chat_info *chat_info;
     int last_timestamp;
-}ims__chat_list;
+} psdims__chat_list;
 
-typedef struct ims__notifications{
-    ims__notif_friend_list friend_request;
-    ims__user_list new_friends;
-    ims__notif_chat_list chats_with_messages;
-    ims__notif_chat_list chats_read_times;
-    ims__notif_chat_member_list chat_members;
-    ims__notif_chat_member_list rem_chat_members;
-    ims__notif_chat_member_list chat_admins;
+typedef struct psdims__notifications {
+    psdims__notif_friend_list friend_request;
+    psdims__user_list new_friends;
+    psdims__notif_chat_list chats_with_messages;
+    psdims__notif_chat_list chats_read_times;
+    psdims__notif_chat_member_list chat_members;
+    psdims__notif_chat_member_list rem_chat_members;
+    psdims__notif_chat_member_list chat_admins;
     int last_timestamp;
-}ims__notifications;
+} psdims__notifications;
 
-typedef struct ims__client_data{
-    ims__chat_list chats;
-    ims__user_list friends;
-    ims__notif_friend_list friend_requests;
+typedef struct psdims__client_data {
+    psdims__chat_list chats;
+    psdims__user_list friends;
+    psdims__notif_friend_list friend_requests;
     int timestamp;
-}ims__client_data;
+} psdims__client_data;
 
-//*******************
-//  方法
-//*******************
 
-//register user
-int ims__user_register(ims__register_info* user_info, int* ERRCODE);
+/********************************************************************
+ * Basicas
+ ********************************************************************/
+// register user
+int psdims__user_register(psdims__register_info *user_info, int *ERRCODE);
 
-//用户注销
-int ims__user_unregister(ims__login_info* login,int* ERRCODE);
+// borrar user
+int psdims__user_unregister(psdims__login_info *login, int *ERRCODE);
 
-//获取用户信息
-int ims__get_user(ims__login_info* login,ims__user_info* user);
+// get user information
+int psdims__get_user(psdims__login_info *login, psdims__user_info *user);
 
-//获取好友列表
-int ims__get_friends(ims__login_info* login,int timestamp,ims__user_list* friends);
+// get friend list
+int psdims__get_friends(psdims__login_info *login, int timestamp, psdims__user_list *friends);
 
-//获取好友信息
-int ims__get_friend_info(ims__login_info* login,char* name,ims__user_info* friend_info);
+// get friend info
+int psdims__get_friend_info(psdims__login_info *login, char *name, psdims__user_info *friend_info);
 
-//获取聊天列表
-int ims__get_chats(ims__login_info* login,int timestamp,ims__chat_list* chats);
+// get chat list
+int psdims__get_chats(psdims__login_info *login, int timestamp, psdims__chat_list *chats);
 
-//获取聊天信息
-int ims__get_chat_info(ims__login_info* login,int chat_id,ims__chat_info* chat);
+// get chat info
+int psdims__get_chat_info(psdims__login_info *login, int chat_id, psdims__chat_info *chat);
 
-//获取聊天的具体信息
-int ims__get_chat_messages(ims__login_info* login,int chat_id,int timestamp,ims__message_list* messages);
+// get messages from chat
+int psdims__get_chat_messages(psdims__login_info *login, int chat_id, int timestamp, psdims__message_list *messages);
 
-//获取信息的附件
-int ims__get_attachment(ims__login_info* login,int chat_id,int msg_timestamp,ims__file* file);
+// Get the file attached to msd_id
+int psdims__get_attachment(psdims__login_info *login, int chat_id, int msg_timestamp, psdims__file *file);
 
-//获取暂定信息
-int ims__get_pending_notifications(ims__login_info* login,int timestamp,ims__sync* sync,ims__notifications* notifications);
-
-//获取所有数据
-int ims__get_all_data(ims__login_info* login,ims__client_data* client_data);
-
-//创建新聊天
-int ims__create_chat(ims__login_info* login,ims__new_chat* new_chat,int* chat_id);
-
-//在聊天中添加新人员
-int ims__add_member(ims__login_info* login,char* name,int chat_id,int* ERRCODE);
-
-//从聊天中删除人员
-int ims__remove_member(ims__login_info* login,char* name,int chat_id,int* ERRCODE);
-
-//从聊天中离开
-int ims__quit_from_chat(ims__login_info* login,int chat_id,int* ERRCODE);
-
-//发送信息
-int ims__send_message(ims__login_info* login,int chat_id,ims__message_info* message,int* timestamp);
-
-//发送文件
-int ims__send_attachment(ims__login_info* login,int chat_id,int msg_timestamp,ims__file* file,int* ERRCODE);
-
-//请求权限
-int ims__send_friend_request(ims__login_info* login,char* request_name,int* timestamp);
-
-//接收请求
-int ims__accept_request(ims__login_info* login,char* request_name,int* timestamp);
+// get pending notifications
+int psdims__get_pending_notifications(psdims__login_info *login, int timestamp, psdims__sync *sync, psdims__notifications *notifications);
 
 //
-int ims__decline_request(ims__login_info* login,char* request_name,int* timestamp);
+int psdims__get_all_data(psdims__login_info *login, psdims__client_data *client_data);
 
-#endif //INSTANTMESSAGESERVICE_IMS_H
+// create new chat
+int psdims__create_chat(psdims__login_info *login, psdims__new_chat *new_chat, int *chat_id);
+
+// add member to chat
+int psdims__add_member(psdims__login_info *login, char *name, int chat_id, int *ERRCODE);
+
+// remove member from chat
+int psdims__remove_member(psdims__login_info *login, char *name, int chat_id, int *ERRCODE);
+
+// quit from chat
+int psdims__quit_from_chat(psdims__login_info *login, int chat_id, int *ERRCODE);
+
+// Send message
+int psdims__send_message(psdims__login_info *login, int chat_id, psdims__message_info *message, int *timestamp);
+
+// Send a file to attach msd_id
+int psdims__send_attachment(psdims__login_info *login, int chat_id, int msg_timestamp, psdims__file *file, int *ERRCODE);
+
+// enviar solicitud de amistad a usuario
+int psdims__send_friend_request(psdims__login_info *login, char* request_name, int *timestamp);
+
+// aceptar solicitud de amistad
+int psdims__accept_request(psdims__login_info *login, char *request_name, int *timestamp);
+
+// rechazar solicitud de amistad
+int psdims__decline_request(psdims__login_info *login, char *request_name, int *timestamp);
+

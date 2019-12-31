@@ -3,10 +3,10 @@
 //
 
 #include "soapH.h"
-#include "psdims.nsmap"
+#include "xop.nsmap"
 #include "persistence.h"
 #include "bool.h"
-#include "psd_ims_server.h"
+#include "ims_server.h"
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>

@@ -6,7 +6,7 @@
 #include <string.h>
 
 #include "network.h"
-#include "psd_ims_client.h"
+#include "ims_client.h"
 
 #include "leak_detector_c.h"
 

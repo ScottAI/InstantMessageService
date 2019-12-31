@@ -6,7 +6,7 @@
 #include <signal.h>
 #include <pthread.h>
 #include <ctype.h>
-#include "psd_ims_client.h"
+#include "ims_client.h"
 #include "bool.h"
 #include "errors.h"
 

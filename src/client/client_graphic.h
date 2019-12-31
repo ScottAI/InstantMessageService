@@ -5,11 +5,13 @@
 #ifndef INSTANTMESSAGESERVICE_CLIENT_GRAPHIC_H
 #define INSTANTMESSAGESERVICE_CLIENT_GRAPHIC_H
 
-#endif //INSTANTMESSAGESERVICE_CLIENT_GRAPHIC_H
 
-#include "psd_ims_client.h"
+
+#include "ims_client.h"
 
 /*
  * Run the console graphic menu
  */
 int graphic_client_run(psd_ims_client *client);
+
+#endif //INSTANTMESSAGESERVICE_CLIENT_GRAPHIC_H

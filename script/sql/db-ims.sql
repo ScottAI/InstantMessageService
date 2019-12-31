@@ -1,6 +1,6 @@
-CREATE DATABASE PSD;
+CREATE DATABASE IMS;
 
-USE PSD;
+USE IMS;
 
 /*--------------------------CREATE TABLE---------------------------------------*/
 

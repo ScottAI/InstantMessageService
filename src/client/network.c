@@ -2,9 +2,9 @@
 // Created by 刘金亮 on 2019-12-26.
 //
 #include "soapH.h"
-#include "psdims.nsmap"
+#include "xop.nsmap"
 #include "network.h"
-#include "psd_ims_client.h"
+#include "ims_client.h"
 #include "bool.h"
 
 #include <stdlib.h>
